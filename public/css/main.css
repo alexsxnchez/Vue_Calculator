@@ -1,98 +1,113 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1p&family=Maven+Pro:wght@400..900&family=Play:wght@400;700&family=Quicksand:wght@300..700&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
 
 *, *::before, *::after {
     margin: 0;
 }
-header {
-    background-color: #333;
-}
+#app,
 body {
-    font-family: 'Raleway', sans-serif;
+    font-family: "M PLUS 1p", sans-serif !important;
+    background-color: #E7E7E7;
 }
-.title {
+.top__banner {
     display: flex;
-    color: white;
-    padding: 10px;
+    color: #FFFFFF;
+    padding: 24px;
+    background-color: #192339;
 }
-.title > img {
+.top__banner img {
     height: 60px;
 }
-.title > h1 {
-    padding-left: 10px;
-    font-size: 28pt;
-    margin: auto 0;
-}
-.calculator {
-    background: linear-gradient(#e24242, #02486f);
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 15px 15px 15px grey;
+.calculator__container {
+    background-color: #111111;
+    padding: 18px 12px;
+    border-radius: 10px;
     margin: 0 auto;
-    width: 400px;
-    height: 400px;
-    font-size: 20px;
+    width: fit-content;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-auto-rows: minmax(50px, auto);
-    align-items: center
+    align-items: center;
+    grid-gap: 8px;
 }
 .zero {
     grid-column: 1 / 3;
+    width: auto !important;
 }
-.btn {
-    font-size: 18pt;
-    background: #eee;
+.calculator__button {
+    font-size: 25px;
+    background-color: #333333;
+    color: #FFFFFF;
     border-radius: 5px;
-    margin: 0 4px;
-    padding: 5px 0;
+    height: 70px;
+    width: 70px;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.btn:hover {
-    background-color: #999;
-    color: white;
+.calculator__button:hover {
+    background-color: #242424;
 }
-.display {
+.calculator__display {
+    font-size: 45px;
     grid-column: 1 / 5;
-    background-color: #333;
-    color: white;
+    width: auto !important;
+    padding: 0 12px;
+    background-color: #111111;
+    color: #FFFFFF;
+    justify-content: flex-end;
 }
-.display:hover {
-    background-color: #333;
+.calculator__display:hover {
+    background-color: #111111 !important;
+}
+.calculator__display:hover {
+    background-color: #333333;
     cursor: text;
 }
 .operator {
-    background-color: #6bb137;
-    color: white;
+    font-size: 28px;
+    background-color: #E2922D;
+    color: #FFFFFF;
 }
 .operator:hover {
-    background-color: #5a942e;
+    background-color: #a35f0c;
     cursor: pointer;
 }
+.sub__operator {
+    background-color: #B9B9B9;
+    color: #111111;
+}
+.sub__operator:hover {
+    background-color: #8C8C8C;
+}
 footer {
-    background-color: #333;
-    color: white;
+    background-color: #192339;
+    color: #FFFFFF;
 }
 footer p {
-    color: white;
-    font-size: 15pt;
-    font-weight: 800;
-    padding: 25px;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 24px;
+    margin: 0 auto;
+    width: fit-content;
+    text-align: center;
 }
 
 @media only screen and (max-width: 500px) {
-    .title > img {
+    .top__banner img {
         height: 40px;
+        margin: 0 auto;
     }
-    .title > h1 {
-        font-size: 24pt;
+    .calculator__button {
+        font-size: 17px;
+        height: 50px;
+        width: 50px;
     }
-    .calculator {
-        width: 300px;
-        height: 300px;
-        font-size: 18px;
+    .calculator__display {
+        font-size: 37px;
     }
-    .btn {
-        font-size: 16pt;
+    .operator {
+        font-size: 20px;
     }
     footer p {
         padding: 20px;
